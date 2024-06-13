@@ -24,6 +24,6 @@ stages:
     parameters:
       snyk_token: $(snyk_token)
 
-# - stage: ZAP_DAST_Scan
-#   jobs:
-#     - template: zap-dast-scan.yml
+- stage: ZAP_DAST_Scan
+  jobs:
+    - template: zap-dast-scan.yml
