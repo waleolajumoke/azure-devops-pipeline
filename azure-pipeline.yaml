@@ -7,8 +7,8 @@ pool:
 
 variables:
 - group: "SECURE_TOKENS"
-- name: snyk_token
-  value: $[variables.SNYKTOKEN]
+# - name: snyk_token
+#   value: $[variables.SNYKTOKEN]
 - name: sonar_token
   value: $[variables.SONARTOKEN]
 
@@ -19,12 +19,12 @@ stages:
     parameters:
       sonar_token: $(sonar_token)
 
-- stage: SNYK_SCA_Scan
-  jobs:
-  - template: snyk-sca-scan.yml
-    parameters:
-      snyk_token: $(snyk_token)
+# - stage: SNYK_SCA_Scan
+#   jobs:
+#   - template: snyk-sca-scan.yml
+#     parameters:
+#       snyk_token: $(snyk_token)
 
-- stage: ZAP_DAST_Scan
-  jobs:
-    - template: zap-dast-scan.yml
+# - stage: ZAP_DAST_Scan
+#   jobs:
+#     - template: zap-dast-scan.yml
