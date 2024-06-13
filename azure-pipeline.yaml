@@ -12,7 +12,7 @@ variables:
   value: $[variables.SONARTOKEN]
 
 stages:
-- stage: SonarCloud_SAST_Scan
+- stage: SonarCloud_SAST_Scan analysis
   jobs:
   - template: sonar-sast-scan.yml
     parameters:
